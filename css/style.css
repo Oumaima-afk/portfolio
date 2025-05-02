@@ -1,12 +1,17 @@
 @font-face {
   font-family: "PlusJakarta";
-  src: url(../assets/PlusJakartaSans-VariableFont_wght.ttf);
+  src: url(../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Razed";
+  src: url(../assets/fonts/RazedBold.ttf);
 }
 
 /* GENERAL */
 
 html {
-  scroll-padding-top: 6vh;
+  scroll-padding-top: 7vh;
 }
 
 body {
@@ -16,17 +21,28 @@ body {
   padding: 0;
 }
 
+h2 {
+  text-transform: uppercase;
+}
+
 /* NAVBAR FIXE */
+.logo {
+  font-weight: bold;
+  font-family: "Razed";
+}
+
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 6vh;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 7vh;
+  padding: 0 2rem;
+  background-color: white;
+  /* backdrop-filter: blur(10px); */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   z-index: 999;
 }
@@ -49,7 +65,7 @@ body {
 
 /* HERO SECTION */
 .hero {
-  background-image: url(../assets/v904-nunny-031-g.jpg);
+  background-image: url(../assets/white-vector-gradient.jpg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -67,7 +83,7 @@ body {
 .hero-text-container {
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: 20px;
   width: fit-content;
   margin-bottom: 2rem;
   padding-left: 10rem;
@@ -154,11 +170,37 @@ body {
 
 /* ABOUT-ME SECTION */
 .about-me {
-  min-height: 94vh;
-  padding: 1rem;
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.about-me-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.about-me .description,
+.skills {
+  width: 45%;
+  margin-top: 3rem;
+  text-align: justify;
+}
+
+.about-me .description-1 {
+  margin-bottom: 1rem;
+}
+
+.about-me span {
+  font-weight: bold;
 }
 
 h2 {
+  margin-bottom: 2rem;
+}
+
+h2,
+h3 {
   display: flex;
   justify-content: center;
 }
@@ -168,6 +210,7 @@ h2 {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  margin-top: 1.5rem;
   gap: 0.5rem;
 }
 
@@ -177,14 +220,14 @@ h2 {
   align-items: center;
   padding: 0.5rem;
   border-radius: 15px;
-  width: 15%;
-  font-size: 0.7rem;
+  width: 20%;
+  font-size: 0.6rem;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   transition: 0.3s;
 }
 
 .skill--container__box img {
-  width: 40px;
+  width: 30px;
   padding-bottom: 0.2rem;
 }
 
@@ -195,43 +238,69 @@ h2 {
 /* PROJECTS SECTION */
 .projects {
   min-height: 94vh;
-  padding: 1rem;
+  padding: 1rem 3rem;
 }
 
 .projects-container {
   display: flex;
   justify-content: center;
   gap: 1rem;
-  margin: 1rem;
+  margin: 2rem;
+  text-align: justify;
 }
 
 .projects-container__box {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  border: 1px solid #000;
+  border: 2px solid #e2d4d4;
   border-radius: 15px;
-  width: 35%;
-  height: 200px;
+  width: 30%;
+  height: fit-content;
+}
+
+.projects-container__box .button {
+  display: flex;
 }
 
 .projects-container__box button {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   width: fit-content;
   border-radius: 10px;
-  border: 1px solid;
+  border: 1px solid #b88a8a;
   cursor: pointer;
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  background-color: rgb(245, 207, 207, 0.7);
+}
+
+.projects-container__box a {
+  text-decoration: none;
+  color: #4b2e2e;
+}
+
+.projects-container__box .stack {
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+.projects-container__box .description {
+  font-size: 0.9rem;
 }
 
 .projects-btn {
-  display: flex;
-  justify-content: center;
   padding: 0.4rem 1rem;
   border-radius: 10px;
   border: 1px solid;
+  color: white;
+  border: 2px solid #c0504d;
+  background-image: linear-gradient(to bottom, #f28b82 0%, #c0504d 100%);
+  transition: 0.3s ease-in-out;
   cursor: pointer;
+}
+
+.projects-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 /* CONTACT */
@@ -241,7 +310,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: url(../assets/v904-nunny-031-g.jpg);
+  background-image: url(../assets/white-vector-gradient.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -259,9 +328,11 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 15px;
+  border-radius: 10px;
   background: rgba(255, 255, 255, 0.5);
   backdrop-filter: blur(30px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   padding: 30px;
   gap: 15px;
 }
@@ -283,7 +354,7 @@ h2 {
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 15px;
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.5);
   color: #000;
 }
 
@@ -295,22 +366,22 @@ h2 {
 
 .contact form button {
   border: none;
-  background-color: #fff;
+  background-color: #d6d6d6;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
   border-radius: 5px;
-  margin-top: 20px;
+  margin-top: 15px;
   font-weight: 600;
   font-size: 15px;
   color: #000;
-  width: 120px;
-  height: 50px;
+  width: 100px;
+  height: 40px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
 
 .contact form button:hover {
-  background-color: #4b2e2e;
+  background-color: #616161;
   color: #fff;
-  transform: scale(1.05);
 }
 
 ::placeholder {
@@ -319,7 +390,17 @@ h2 {
 
 /* FOOTER */
 .footer {
+  background-color: #d8d8d8;
   height: 20vh;
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+  font-size: 0.8rem;
+}
+
+.footer span {
+  font-weight: bold;
+  font-size: 0.9rem;
 }
 
 /* ACCESSIBILITE */
