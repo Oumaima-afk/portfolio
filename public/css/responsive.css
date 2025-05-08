@@ -1,0 +1,167 @@
+/* === Responsive pour tablettes (768px et moins) === */
+@media (max-width: 768px) {
+  /* Navbar */
+  .navbar {
+    padding: 0 1rem;
+    height: 8vh;
+  }
+
+  .navbar nav {
+    gap: 1rem;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+  }
+
+  .sidebar {
+    top: auto;
+    bottom: 1rem;
+    right: 1rem;
+    flex-direction: row;
+    padding: 0.5rem 1rem;
+  }
+
+  /* Hero Section */
+  .hero-text-container {
+    padding-left: 2rem;
+    font-size: 18px;
+  }
+
+  .hero-text-container h1 {
+    font-size: 36px;
+  }
+
+  .stage-cv {
+    padding-left: 2rem;
+    justify-content: center;
+  }
+
+  /* About Me Section */
+  .about-me-container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .about-me .description,
+  .skills {
+    width: 100%;
+  }
+
+  .skills-container {
+    gap: 0.5rem;
+  }
+
+  .skill--container__box {
+    flex-basis: 45%;
+  }
+
+  /* Projects Section */
+  .projects-container {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .projects-container__box {
+    width: 100%;
+  }
+
+  /* Contact Section */
+  .contact form {
+    padding: 20px;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    font-size: 14px;
+  }
+}
+
+/* === Responsive pour mobiles (480px et moins) === */
+@media (max-width: 480px) {
+  /* Navbar */
+  .navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 6vh;
+    padding: 0.5rem 1rem;
+  }
+
+  .navbar nav {
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .navbar a {
+    font-size: 0.7rem;
+    padding: 0.3rem 0;
+  }
+
+  /* Hero Section */
+  .hero {
+    padding: 2rem 1rem;
+  }
+
+  .hero-text-container {
+    text-align: center;
+  }
+
+  .hero-text-container h1 {
+    font-size: 28px;
+  }
+
+  .stage-cv {
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 0;
+  }
+
+  /* About Me Section */
+  .about-me-container {
+    gap: 1rem;
+  }
+
+  .skills-container {
+    gap: 0.5rem;
+  }
+
+  .skill--container__box {
+    flex-basis: 100%;
+  }
+
+  /* Projects Section */
+  .projects-container {
+    gap: 1rem;
+  }
+
+  .projects-container__box {
+    width: 100%;
+  }
+
+  /* Contact Section */
+  .contact {
+    padding: 20px 10px;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    font-size: 12px;
+  }
+
+  .contact form button {
+    width: 80px;
+    height: 35px;
+    font-size: 12px;
+  }
+
+  /* Footer */
+  .footer {
+    font-size: 0.7rem;
+    padding: 2rem;
+  }
+}
