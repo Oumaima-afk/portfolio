@@ -9,26 +9,27 @@
       name="description"
       content="Oumaïma Afakkir | Conceptrice développeuse d'applications"
     />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
-    <link rel="stylesheet" href="../css/responsive.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
   </head>
 
   <body>
-    <header class="navbar">
-      <div class="logo">Oumaïma</div>
-
-      <nav>
-        <a href="#accueil">Accueil</a>
-        <a href="#about-me">À propos</a>
-        <a href="#projects">Projets</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <!-- <div class="dark-mode">Dark mode</div> -->
-    </header>
-
     <section id="accueil" class="hero">
+      <header class="navbar">
+        <div class="burger" id="burger">
+          <i class="fas fa-bars"></i>
+        </div>
+
+        <nav class="nav-links">
+          <div class="logo">Oumaïma</div>
+          <a href="#accueil" class="active">Accueil</a>
+          <a href="#about-me">À propos</a>
+          <a href="#projects">Projets</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </header>
+
       <aside class="sidebar">
         <a href="#contact">
           <img src="./assets/mail-icon.svg" alt="Icône Email" />
@@ -44,15 +45,22 @@
         </a>
       </aside>
 
-      <div class="hero-text-container">
-        <p>Hey, je suis</p>
-        <h1>{Oumaïma AFAKKIR}</h1>
+      <div class="hero-container">
+        <p>Hey, je suis <span>Oumaïma AFAKKIR</span></p>
         <p>Conceptrice et développeuse d'applications</p>
-      </div>
-
-      <div class="stage-cv">
-        <div class="stage">En recherche de stage</div>
-        <div class="cv">Voir mon CV</div>
+        <div class="stage-cv">
+          <div class="stage">En recherche de stage</div>
+          <div class="cv">
+            Voir mon CV<dotlottie-player
+              src="https://lottie.host/46e31844-7005-44a9-abf1-f70d2608fa65/OBTMGTnGGu.lottie"
+              background="transparent"
+              speed="1"
+              style="width: 30px; height: 30px; transform: rotate(-90deg)"
+              loop
+              autoplay
+            ></dotlottie-player>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -148,7 +156,10 @@
               alt="screen du projet Maison Almas"
             />
             <h4>Maison Almas</h4>
-            <p class="stack">HTML | CSS</p>
+            <div class="stack-container">
+              <p class="stack">HTML</p>
+              <p class="stack">CSS</p>
+            </div>
             <p class="description"></p>
             <div class="button">
               <button class="live-btn">Voir en live</button>
@@ -162,7 +173,13 @@
           <div class="projects-container__box">
             <img src="" alt="" />
             <h4>Chat IA</h4>
-            <p class="stack">JavaScript | HTML | CSS | Svelte | PocketBase</p>
+            <div class="stack-container">
+              <p class="stack">JavaScript</p>
+              <p class="stack">HTML</p>
+              <p class="stack">CSS</p>
+              <p class="stack">Svelte</p>
+              <p class="stack">PocketBase</p>
+            </div>
             <p class="description"></p>
             <div class="button">
               <button class="live-btn">Voir en live</button>
@@ -175,7 +192,11 @@
               alt="screens du jeu catch the moon"
             />
             <h4>Catch the moon</h4>
-            <p class="stack">JavaScript | HTML | CSS</p>
+            <div class="stack-container">
+              <p class="stack">JavaScript</p>
+              <p class="stack">HTML</p>
+              <p class="stack">CSS</p>
+            </div>
             <p class="description">
               Catch the Moon est un mini-jeu d’arcade que j’ai développé en
               JavaScript vanilla pour pratiquer la manipulation du DOM, la
@@ -242,5 +263,9 @@
     </footer>
 
     <script src="script.js" defer></script>
+    <script
+      src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
+      type="module"
+    ></script>
   </body>
 </html>

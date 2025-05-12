@@ -1,3 +1,17 @@
+// class .active
+const navLinks = document.querySelectorAll(".nav-links a");
+
+navLinks[0].classList.add("active");
+
+navLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    navLinks.forEach((link) => {
+      link.classList.remove("active");
+    });
+    link.classList.add("active");
+  });
+});
+
 function confirmationMsg() {
   const sendEmailScreen = document.createElement("div");
   sendEmailScreen.classList.add("confirmation-msg");
