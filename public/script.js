@@ -1,17 +1,32 @@
-// class .active
-const navLinks = document.querySelectorAll(".nav-links a");
+// skills container
+const skills = [
+  { name: "JavaScript", icon: "./assets/skills_icons/JavaScript.svg" },
+  { name: "TypeScript", icon: "./assets/skills_icons/TypeScript.svg" },
+  { name: "Python", icon: "./assets/skills_icons/Python.svg" },
+  { name: "HTML5", icon: "./assets/skills_icons/HTML5.svg" },
+  { name: "CSS3", icon: "./assets/skills_icons/CSS3.svg" },
+  { name: "React", icon: "./assets/skills_icons/React.svg" },
+  { name: "Node.js", icon: "./assets/skills_icons/Node.js.svg" },
+  { name: "Express.js", icon: "./assets/skills_icons/Express.svg" },
+  { name: "PostgresSQL", icon: "./assets/skills_icons/PostgresSQL.svg" },
+  { name: "GraphQL", icon: "./assets/skills_icons/GraphQL.svg" },
+  { name: "Docker", icon: "./assets/skills_icons/Docker.svg" },
+  { name: "GitHub", icon: "./assets/skills_icons/GitHub.svg" },
+];
 
-navLinks[0].classList.add("active");
+const container = document.querySelector(".skills-container");
+container.innerHTML = skills
+  .map(
+    (skill) => `
+  <div class="skill--container__box">
+    <img src="${skill.icon}" alt="${skill.name} icon" />
+    <h3>${skill.name}</h3>
+  </div>
+`
+  )
+  .join("");
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navLinks.forEach((link) => {
-      link.classList.remove("active");
-    });
-    link.classList.add("active");
-  });
-});
-
+// mail send confirmation screen
 function confirmationMsg() {
   const sendEmailScreen = document.createElement("div");
   sendEmailScreen.classList.add("confirmation-msg");
@@ -27,12 +42,12 @@ function confirmationMsg() {
 
   document.body.appendChild(sendEmailScreen);
 
-  setTimeout(() => {
-    sendEmailScreen.lassList.add("fade-out");
-    setTimeout(() => {
-      sendEmailScreen.remove();
-    }, 500);
-  }, 4000);
+  // setTimeout(() => {
+  //   sendEmailScreen.classList.add("fade-out");
+  //   setTimeout(() => {
+  //     sendEmailScreen.remove();
+  //   }, 500);
+  // }, 4000);
 
   const closeButton = sendEmailScreen.querySelector(".close-btn");
   closeButton.addEventListener("click", () => {

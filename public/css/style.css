@@ -290,7 +290,7 @@ h3 {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
   padding: 0.2rem 1rem;
-  background-color: rgb(97, 50, 7);
+  background-color: #894cff;
   color: #fff;
 }
 
@@ -323,17 +323,19 @@ h3 {
   padding: 0.4rem 0.8rem;
   border-radius: 15px;
   border: 1px solid;
-  font-weight: bold;
-  color: #cd7305;
-  background-color: rgba(255, 255, 255, 0.3);
-  border: 2px solid #cd7305;
+  font-weight: 700;
   transition: 0.3s ease-in-out;
   cursor: pointer;
+  color: #1f1353;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 2px 5px, rgba(0, 0, 0, 0.2) 0px 5px 5px;
+  border: 2px solid #894cff;
 }
 
 .projects-btn:hover {
-  color: #7d4602;
-  border: 2px solid #7d4602;
+  transition: 0.3s ease-in-out;
+  color: white;
+  background-image: linear-gradient(to left, #6e4cff 0%, #894cff 100%);
   box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 15px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 

@@ -9,7 +9,7 @@ console.log("Import OK");
 const app = express();
 console.log("App créée");
 
-const port = 3000;
+const port = 3250;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
