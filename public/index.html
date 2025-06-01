@@ -96,70 +96,17 @@
       </section>
       <section id="projects" class="projects">
         <h2>Projects</h2>
-        <div class="projects-container">
-          <div class="projects-container__box">
-            <img
-              src="./assets/maison-almas.png"
-              alt="screen du projet Maison Almas"
-            />
-            <h4>Maison Almas</h4>
-            <div class="stack-container">
-              <p class="stack">HTML</p>
-              <p class="stack">CSS</p>
-            </div>
-            <p class="description"></p>
-            <div class="button">
-              <button class="live-btn">Voir en live</button>
-              <button class="github-btn">
-                <a href="https://github.com/Oumaima-afk/MaisonAlmas.git"
-                  >Lien GitHub</a
-                >
-              </button>
-            </div>
+        <div class="carousel-wrapper">
+          <button class="prev">
+            <img src="assets/arrow-left.svg" alt="flêche vers la gauche" />
+          </button>
+          <div class="carousel">
+            <div class="projects-container"></div>
           </div>
-          <div class="projects-container__box">
-            <img src="" alt="" />
-            <h4>Chat IA</h4>
-            <div class="stack-container">
-              <p class="stack">JavaScript</p>
-              <p class="stack">HTML</p>
-              <p class="stack">CSS</p>
-              <p class="stack">Svelte</p>
-              <p class="stack">PocketBase</p>
-            </div>
-            <p class="description"></p>
-            <div class="button">
-              <button class="live-btn">Voir en live</button>
-              <button class="github-btn">Lien GitHub</button>
-            </div>
-          </div>
-          <div class="projects-container__box">
-            <img
-              src="./assets/catch-the-moon.png"
-              alt="screens du jeu catch the moon"
-            />
-            <h4>Catch the moon</h4>
-            <div class="stack-container">
-              <p class="stack">JavaScript</p>
-              <p class="stack">HTML</p>
-              <p class="stack">CSS</p>
-            </div>
-            <p class="description">
-              Catch the Moon est un mini-jeu d’arcade que j’ai développé en
-              JavaScript vanilla pour pratiquer la manipulation du DOM, la
-              logique de jeu et la navigation multi-pages.
-            </p>
-            <div class="button">
-              <button class="live-btn">Voir en live</button>
-              <button class="github-btn">
-                <a href="https://github.com/Oumaima-afk/Catch_the_moon_game.git"
-                  >Lien GitHub</a
-                >
-              </button>
-            </div>
-          </div>
+          <button class="next">
+            <img src="assets/arrow-right.svg" alt="flêche vers la droite" />
+          </button>
         </div>
-        <button class="projects-btn">Voir plus de projets</button>
       </section>
       <section id="contact" class="contact">
         <h2>Contact</h2>
@@ -209,7 +156,10 @@
       </section>
     </footer>
 
-    <script src="script.js" defer></script>
+    <script src="./js/skills.js" defer></script>
+    <script src="./js/projects.js" defer></script>
+    <script src="./js/mail.js" defer></script>
+
     <script
       src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
       type="module"
