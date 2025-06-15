@@ -149,12 +149,32 @@ p {
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: 0.3s ease-in-out;
   display: flex;
-  gap: 0.5rem;
+  gap: 1rem;
   align-items: center;
 }
 
 .cv:hover {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.cv embed {
+  width: 100%;
+}
+
+.cv-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.cv-link a {
+  text-decoration: none;
+}
+
+.cv-link dotlottie-player {
+  cursor: pointer;
 }
 
 /* SIDEBAR */
@@ -280,8 +300,7 @@ h3 {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  border: none;
-  cursor: pointer;
+  z-index: 10;
   background-color: white;
 }
 
@@ -302,7 +321,7 @@ h3 {
   display: flex;
   gap: 2rem;
   padding: 3rem 0;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   will-change: transform;
 }
 

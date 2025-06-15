@@ -1,14 +1,14 @@
 // Liste des projets
 const projects = [
   {
-    title: "Chat IA",
-    image: "",
+    title: "NeonAI",
+    image: "./assets/NeonAI.png",
     alt: "screen du projet Chat IA",
     stack: ["JavaScript", "HTML", "CSS", "Svelte", "PocketBase"],
     description:
-      "O'Chat est une application web développée avec Svelte et Vite qui permet de dialoguer avec l'IA Mistral. Elle offre une gestion des conversations, une persistance des données via PocketBase, et un affichage Markdown pour une expérience utilisateur fluide.",
+      "NeonAI est une application web développée avec Svelte et Vite qui permet de dialoguer avec l'IA Mistral. Elle offre une gestion des conversations, une persistance des données via PocketBase, et un affichage Markdown pour une expérience utilisateur fluide.",
     liveLink: "#",
-    githubLink: "https://github.com/Oumaima-afk/Chat-AI.git",
+    githubLink: "https://github.com/Oumaima-afk/NeonAI.git",
   },
   {
     title: "O'Coffee",
@@ -29,16 +29,6 @@ const projects = [
       "Ce projet est un site vitrine interactif pour Maison Almas, une maison de joaillerie fictive, conçu avec une mise en page responsive optimisée pour mobile et tablette",
     liveLink: "#",
     githubLink: "https://github.com/Oumaima-afk/MaisonAlmas.git",
-  },
-  {
-    title: "Catch the moon",
-    image: "./assets/catch-the-moon.png",
-    alt: "screens du jeu catch the moon",
-    stack: ["JavaScript", "HTML", "CSS"],
-    description:
-      "Catch the Moon est un mini-jeu d’arcade que j’ai développé en JavaScript vanilla pour pratiquer la manipulation du DOM, la logique de jeu et la navigation multi-pages.",
-    liveLink: "#",
-    githubLink: "https://github.com/Oumaima-afk/Catch_the_moon_game.git",
   },
 ];
 
@@ -81,11 +71,7 @@ function slideTo(index) {
   const totalVisible = totalItems - visibleItems + 1;
 
   // Boucle infinie
-  if (index >= totalVisible) {
-    index = 0;
-  } else if (index < 0) {
-    index = totalVisible - 1;
-  }
+  index = (index + totalVisible) % totalVisible;
 
   const projectWidth = items.children[0].offsetWidth + 32;
   items.style.transform = `translateX(-${index * projectWidth}px)`;
@@ -99,6 +85,17 @@ prevButton.addEventListener("click", () => {
 
 nextButton.addEventListener("click", () => {
   slideTo(currentIndex + 1);
+});
+
+prevButton.setAttribute("aria-label", "Previous");
+nextButton.setAttribute("aria-label", "Next");
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "ArrowLeft") {
+    slideTo(currentIndex - 1);
+  } else if (e.key === "ArrowRight") {
+    slideTo(currentIndex + 1);
+  }
 });
 
 // Initialisation
