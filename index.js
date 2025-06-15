@@ -61,6 +61,7 @@ app.post("/contact", (req, res) => {
 });
 
 // Lancement du serveur
-app.listen(port, "127.0.0.1", () => {
-  console.log(`Serveur démarré sur http://127.0.0.1:${port}`);
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`Server is running on port ${PORT}`);
 });
