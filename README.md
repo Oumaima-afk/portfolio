@@ -10,12 +10,6 @@ Bienvenue sur mon portfolio de conceptrice développeuse d'applications ! Ce pro
 
 ---
 
-## 🖼️ Aperçu
-
-![Aperçu du portfolio](/assets/preview.png)
-
----
-
 ## 🛠️ Technologies utilisées
 
 - HTML5
