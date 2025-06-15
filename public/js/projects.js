@@ -46,9 +46,6 @@ projectsContainer.innerHTML = projects
       </div>
       <p class="description">${project.description}</p>
       <div class="button">
-        <button class="live-btn">
-          <a href="${project.liveLink}" target="_blank">Voir en live</a>
-        </button>
         <button class="github-btn">
           <a href="${project.githubLink}" target="_blank">Lien GitHub</a>
         </button>
