@@ -16,7 +16,7 @@ const projects = [
     alt: "screen du site O'Coffee",
     stack: ["JavaScript", "HTML", "CSS", "Node.js", "Express", "PostgreSQL"],
     description:
-      "O'Coffee est un site vitrine développé avec Node.js, Express et PostgreSQL pour m’exercer à la gestion d’une base de données relationnelle, la conception d’une architecture back-end, la création de routes et le rendu dynamique des pages avec EJS.",
+      "O'Coffee est un site développé avec Node.js, Express et PostgreSQL pour m’exercer à la gestion d’une base de données relationnelle, la conception d’une architecture backend, la création de routes et le rendu dynamique des pages avec EJS.",
     liveLink: "#",
     githubLink: "https://github.com/Oumaima-afk/OCoffee.git",
   },
