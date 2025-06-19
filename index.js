@@ -9,7 +9,7 @@ console.log("Import OK");
 const app = express();
 console.log("App créée");
 
-const port = 3250;
+const PORT = process.env.PORT || 3000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
@@ -52,7 +52,7 @@ app.post("/contact", (req, res) => {
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error("Erreur Nodemailer :", error);
+      console.error("Erreur Nodemailer :", error.message, error);
       return res.status(500).send("Erreur lors de l'envoi du message");
     }
     console.log("Message envoyé :", info.response);
@@ -61,7 +61,6 @@ app.post("/contact", (req, res) => {
 });
 
 // Lancement du serveur
-const PORT = process.env.PORT || 3000;
 app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server is running on port ${PORT}`);
 });
