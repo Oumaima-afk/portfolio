@@ -280,17 +280,13 @@ h3 {
   border-radius: 15px;
   flex-basis: 20%;
   font-size: 0.7rem;
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 3px 8px 2px;
   transition: 0.3s;
 }
 
 .skill--container__box img {
   width: 30px;
   padding-bottom: 0.2rem;
-}
-
-.skill--container__box:hover {
-  box-shadow: rgb(38, 57, 77) 0px 20px 20px -10px;
 }
 
 /* PROJECTS SECTION */

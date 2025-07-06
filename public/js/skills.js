@@ -10,8 +10,8 @@ const skills = [
   { name: "Node.js", icon: "./assets/skills_icons/Node.js.svg" },
   { name: "Express.js", icon: "./assets/skills_icons/Express.svg" },
   { name: "PostgresSQL", icon: "./assets/skills_icons/PostgresSQL.svg" },
+  { name: "Sequelize", icon: "./assets/skills_icons/Sequelize.svg" },
   { name: "GraphQL", icon: "./assets/skills_icons/GraphQL.svg" },
-  { name: "Docker", icon: "./assets/skills_icons/Docker.svg" },
 ];
 
 const container = document.querySelector(".skills-container");
