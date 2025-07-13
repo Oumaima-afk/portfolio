@@ -1,0 +1,165 @@
+/* PROJECTS SECTION */
+.projects {
+  min-height: 94vh;
+  padding: 1rem 3rem;
+  margin: 0 auto 2rem auto;
+  max-width: 900px;
+  position: relative;
+}
+
+.projects-intro {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #444;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.projects-intro a {
+  color: #894cff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.projects-intro a:hover {
+  color: #005580;
+  text-decoration: none;
+}
+
+.projects button {
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.carousel-wrapper .prev,
+.carousel-wrapper .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background-color: white;
+}
+
+.carousel-wrapper .prev img,
+.carousel-wrapper .next img {
+  width: 40px;
+}
+
+.carousel-wrapper .prev {
+  left: -80px;
+}
+
+.carousel-wrapper .next {
+  right: -80px;
+}
+
+.projects-container {
+  display: flex;
+  gap: 2rem;
+  padding: 3rem 0;
+  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  will-change: transform;
+}
+
+.projects-container__box {
+  flex: 0 0 calc(50% - 1rem);
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background: #f8f5f3;
+  box-sizing: border-box;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.projects-container__box img {
+  width: 100%;
+  height: auto;
+  border-radius: 7px;
+  object-fit: cover;
+}
+
+.stack-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+
+.stack {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 10px;
+  background-color: rgba(160, 160, 160, 0.4);
+}
+
+h4 {
+  margin-top: 1rem;
+}
+
+.description {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  text-align: justify;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.button button {
+  border: none;
+  border-radius: 15px;
+  padding: 0.4rem 1rem;
+  font-size: 0.9rem;
+  background-color: #894cff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.button button:hover {
+  background-color: #6e4cff;
+}
+
+.button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Bouton extra si besoin */
+.projects-btn {
+  display: block;
+  margin: 2rem auto 0;
+  padding: 0.6rem 1.2rem;
+  border-radius: 15px;
+  border: 2px solid #894cff;
+  font-weight: 700;
+  color: #1f1353;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 2px 5px, rgba(0, 0, 0, 0.2) 0px 5px 5px;
+  cursor: pointer;
+}
+
+.projects-btn:hover {
+  color: white;
+  background-image: linear-gradient(to left, #6e4cff 0%, #894cff 100%);
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 15px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}

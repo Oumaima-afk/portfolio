@@ -1,0 +1,88 @@
+/* ABOUT-ME SECTION */
+.about-me {
+  min-height: 80vh;
+  padding: 2rem;
+}
+
+.about-me-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.about-me .description,
+.skills {
+  width: 45%;
+  margin-top: 2rem;
+  text-align: justify;
+  align-self: center;
+}
+
+.about-me .description-1 {
+  margin-bottom: 1rem;
+}
+
+.about-me span {
+  font-weight: bold;
+}
+
+.about-me-btn {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.about-me-btn .btn-contact {
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #894cff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+}
+
+.about-me-btn .btn-contact:hover {
+  background-color: #6e4cff;
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 8px;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+h2,
+h3 {
+  display: flex;
+  justify-content: center;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+
+.skill--container__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 15px;
+  flex-basis: 20%;
+  font-size: 0.7rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 3px 8px 2px;
+  transition: 0.3s;
+}
+
+.skill--container__box img {
+  width: 30px;
+  padding-bottom: 0.2rem;
+}

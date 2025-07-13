@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "PlusJakarta";
+  src: url(../assets/fonts/PlusJakartaSans-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: "Razed";
+  src: url(../assets/fonts/RazedBold.ttf);
+}
+
+body {
+  font-family: "PlusJakarta", sans-serif;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+p {
+  line-height: 1.6;
+  font-size: 1rem;
+}

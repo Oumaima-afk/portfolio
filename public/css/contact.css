@@ -1,0 +1,184 @@
+/* CONTACT */
+.contact {
+  min-height: 74vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../assets/soft-background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 40px 20px 80px 20px;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact p {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.contact form {
+  width: 670px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  padding: 30px;
+  gap: 15px;
+}
+
+.form-group {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  max-width: 500px;
+  height: 50px;
+  padding-left: 10px;
+  outline: none;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: #000;
+}
+
+.contact form textarea {
+  min-height: 120px;
+  resize: vertical;
+  padding-top: 10px;
+}
+
+.contact form button {
+  border: none;
+  background-image: linear-gradient(to right, #6e4cff, #894cff);
+  color: white;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 0.8rem 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 6px;
+}
+
+.contact form button:hover {
+  background-image: linear-gradient(to right, #5a3bcc, #6e4cff);
+  transform: translateY(-2px);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 6px 8px;
+}
+
+::placeholder {
+  color: #302f2f;
+}
+
+.confirmation-msg {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(106, 76, 255, 0.15),
+    0 0 0 100vmax rgba(0, 0, 0, 0.2); /* Overlay */
+  text-align: center;
+  z-index: 1000;
+  max-width: 320px;
+  animation: fadeInUp 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  border: 1px solid rgba(106, 76, 255, 0.2);
+}
+
+.confirmation-icon {
+  width: 80px;
+  height: 80px;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: drawCheckmark 0.8s ease-out forwards;
+}
+
+.confirmation-msg h5 {
+  font-size: 1.4rem;
+  color: #6a4cff;
+  margin-bottom: 0.5rem;
+}
+
+.confirmation-msg p {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.close-btn {
+  background: linear-gradient(135deg, #6a4cff, #8a4cff);
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(106, 76, 255, 0.3);
+}
+
+.close-btn .arrow {
+  width: 18px;
+  height: 18px;
+  stroke: white;
+  stroke-width: 2;
+  transition: transform 0.3s ease;
+}
+
+.close-btn:hover .arrow {
+  transform: translateX(3px);
+}
+
+/* ANIMATIONS */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    transform: translate(-50%, -60%);
+  }
+}
+
+@keyframes drawCheckmark {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

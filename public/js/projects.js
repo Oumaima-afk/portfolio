@@ -4,7 +4,14 @@ const projects = [
     title: "NeonAI",
     image: "./assets/NeonAI.png",
     alt: "screen du projet Chat IA",
-    stack: ["JavaScript", "HTML", "CSS", "Svelte", "PocketBase"],
+    stack: [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Svelte",
+      "PocketBase",
+      "Mistral AI API",
+    ],
     description:
       "NeonAI est une application web développée avec Svelte et Vite qui permet de dialoguer avec l'IA Mistral. Elle offre une gestion des conversations, une persistance des données via PocketBase, et un affichage Markdown pour une expérience utilisateur fluide.",
     liveLink: "#",
