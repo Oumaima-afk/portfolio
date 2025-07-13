@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100vh;
+  position: relative;
 }
 
 /* HERO TEXT */
@@ -97,13 +98,18 @@
 }
 
 .hero-bottom-icon {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  margin-top: 130px;
-  color: #000;
+  margin-top: 0;
+  margin-bottom: 10px;
+  pointer-events: none;
 }
+
 .hero-bottom-icon dotlottie-player {
   display: block;
 }

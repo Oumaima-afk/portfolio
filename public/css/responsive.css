@@ -33,7 +33,7 @@
 
   .sidebar {
     position: fixed;
-    top: auto;
+    top: 0;
     bottom: 1rem;
     right: 1rem;
     flex-direction: row;
@@ -87,6 +87,20 @@
 
   .contact form {
     padding: 20px;
+  }
+
+  .hero {
+    min-height: 80vh;
+    padding-bottom: 60px;
+  }
+
+  .hero-bottom-icon {
+    margin-bottom: 0;
+  }
+
+  .hero-bottom-icon dotlottie-player {
+    width: 50px !important;
+    height: 50px !important;
   }
 }
 
@@ -160,5 +174,19 @@
   .confirmation-msg .close-btn {
     font-size: 0.8rem;
     padding: 0.4rem 0.8rem;
+  }
+
+  .hero {
+    min-height: 70vh;
+    padding-bottom: 50px;
+  }
+
+  .hero-bottom-icon {
+    margin-bottom: 0;
+  }
+
+  .hero-bottom-icon dotlottie-player {
+    width: 36px !important;
+    height: 36px !important;
   }
 }
