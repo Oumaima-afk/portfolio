@@ -1,5 +1,3 @@
-// mail
-
 function confirmationMsg() {
   const sendEmailScreen = document.createElement("div");
   sendEmailScreen.classList.add("confirmation-msg");
@@ -16,7 +14,6 @@ function confirmationMsg() {
     </button>
   `;
 
-  // Gestion de la fermeture
   const closeButton = sendEmailScreen.querySelector(".close-btn");
   closeButton.addEventListener("click", () => {
     sendEmailScreen.style.animation = "fadeOut 0.4s ease-out forwards";
@@ -26,34 +23,19 @@ function confirmationMsg() {
   document.body.appendChild(sendEmailScreen);
 }
 
-const form = document.querySelector("form");
+const form = document.getElementById("contact-form");
 
-form.addEventListener("submit", async (e) => {
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const data = {
-    name: form.elements["name"].value,
-    email: form.elements["email"].value,
-    message: form.elements["message"].value,
-  };
-
-  try {
-    const response = await fetch("/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
+  emailjs.sendForm("service_1efa9hk", "template_alr9jst", this).then(
+    () => {
       confirmationMsg();
       form.reset();
-    } else {
-      alert("Erreur lors de l'envoi");
+    },
+    (error) => {
+      console.error("Erreur EmailJS:", error);
+      alert("Erreur lors de l'envoi. Veuillez réessayer.");
     }
-  } catch (err) {
-    console.error(err);
-    alert("Erreur réseau");
-  }
+  );
 });

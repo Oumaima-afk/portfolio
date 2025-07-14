@@ -146,12 +146,12 @@
           N’hésitez pas à me contacter pour toute opportunité de stage, de poste
           ou de collaboration.
         </p>
-        <form action="/contact" method="post">
+        <form id="contact-form">
           <div class="form-group">
             <label for="name" class="sr-only">Nom et Prénom</label>
             <input
               id="name"
-              name="name"
+              name="from_name"
               type="text"
               placeholder="Nom et Prénom"
               required
@@ -162,7 +162,7 @@
             <label for="email" class="sr-only">Email</label>
             <input
               id="email"
-              name="email"
+              name="reply_to"
               type="email"
               placeholder="Email"
               required
@@ -200,5 +200,12 @@
       src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs"
       type="module"
     ></script>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      (function() {
+        emailjs.init("2aQVb4u2hT29FCnw6");
+      })();
+    </script>
   </body>
 </html>

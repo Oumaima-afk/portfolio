@@ -107,6 +107,7 @@
 }
 
 .confirmation-icon {
+  margin: auto;
   width: 80px;
   height: 80px;
   stroke-dasharray: 100;
@@ -115,7 +116,7 @@
 }
 
 .confirmation-msg h5 {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #6a4cff;
   margin-bottom: 0.5rem;
 }
