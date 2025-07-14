@@ -19,35 +19,54 @@
 }
 
 @media screen and (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    gap: 1rem;
-    padding: 0 1rem;
+  .burger {
+    display: block; /* Afficher le burger */
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    margin-right: auto;
   }
 
   .nav-links {
-    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 30%;
+    height: 50vh;
+    background-color: #fcfafc;
+    flex-direction: column;
     justify-content: center;
-    padding: 0.5rem 1rem;
+    align-items: center;
+    transform: translateX(-100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    transform: translateX(0);
+  }
+
+  .navbar {
+    justify-content: space-between;
+    padding: 0 1rem;
   }
 
   .sidebar {
-    position: fixed;
-    top: 0;
+    top: auto;
     bottom: 1rem;
-    right: 1rem;
+    left: 1rem;
+    right: auto;
     flex-direction: row;
-    justify-content: center;
     padding: 0.5rem 1rem;
   }
 
   .sidebar img {
-    width: 24px;
-    height: 24px;
+    width: 25px;
   }
 
   .hero-container {
-    margin-top: 20vh;
+    margin-top: 15vh;
     font-size: 16px;
     text-align: center;
   }
@@ -64,12 +83,33 @@
     flex-direction: column;
   }
 
+  .cv {
+    margin-top: 1rem;
+  }
+
   .about-me-container {
     flex-direction: column;
   }
 
+  .skills {
+    width: 90%;
+  }
+
+  .skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+  }
+
   .skill--container__box {
-    flex-basis: 40%;
+    flex-basis: 33.33%;
+    max-width: 33.33%;
+    min-width: 90px;
+    box-sizing: border-box;
+    font-size: 0.7rem;
+    margin: 0;
+    text-align: center;
   }
 
   .projects {
@@ -105,12 +145,6 @@
 }
 
 @media screen and (max-width: 480px) {
-  .logo {
-    font-size: 1.2rem;
-    margin: 0;
-    padding: 0.5rem 1rem;
-  }
-
   .nav-links a {
     font-size: 0.9rem;
     padding: 0.4rem 1rem;
@@ -128,7 +162,6 @@
   .cv {
     font-size: 0.9rem;
     padding: 0.6rem 1rem;
-    margin-top: 2rem;
   }
 
   .skills-container {

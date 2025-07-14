@@ -6,17 +6,29 @@
 
 .about-me-container {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: row;
+  align-items: flex-start;
   justify-content: center;
   gap: 2.5rem;
 }
 
 .about-me .description,
 .skills {
-  width: 45%;
   margin-top: 2rem;
   text-align: justify;
   align-self: center;
+}
+
+.about-me .description {
+  flex: 2;
+  min-width: 220px;
+  max-width: 650px;
+}
+
+.skills {
+  flex: 1;
+  min-width: 220px;
+  max-width: 650px;
 }
 
 .about-me .description-1 {
@@ -83,6 +95,6 @@ h3 {
 }
 
 .skill--container__box img {
-  width: 30px;
+  height: 30px;
   padding-bottom: 0.2rem;
 }
