@@ -15,8 +15,7 @@ Bienvenue sur mon portfolio de conceptrice développeuse d'applications ! Ce pro
 - HTML5
 - CSS3 (Responsive Design)
 - JavaScript
-- Node.js & Express
-- Nodemailer (pour l'envoi des emails depuis le formulaire de contact)
+- EmailJS (pour l'envoi des emails depuis le formulaire de contact)
 
 ---
 
