@@ -3,7 +3,7 @@
 const skills = [
   { name: "JavaScript", icon: "./assets/skills_icons/JavaScript.svg" },
   { name: "TypeScript", icon: "./assets/skills_icons/TypeScript.svg" },
-  { name: "Python", icon: "./assets/skills_icons/Python.svg" },
+  // { name: "Python", icon: "./assets/skills_icons/Python.svg" },
   { name: "HTML5", icon: "./assets/skills_icons/HTML5.svg" },
   { name: "CSS3", icon: "./assets/skills_icons/CSS3.svg" },
   { name: "React", icon: "./assets/skills_icons/React.svg" },
